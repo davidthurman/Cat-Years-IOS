@@ -16,11 +16,15 @@ class ViewController: UIViewController {
     
     @IBAction func findAge(sender: AnyObject) {
         
-        var catAge = Int  (catAgeTextField.text!)!
         
-        catAge = catAge * 7
-        resultLabel.text = "Your cat is \(catAge) in cat years."
+        let catAge = catAgeTextField.text
+        var x = Int(catAge!)
         
+        
+        if (x != nil && x > 0){
+        x = x! * 7
+        resultLabel.text = "Your cat is \(x!) in cat years."
+        }
     }
  
 
